@@ -1,0 +1,24 @@
+<% if current_user %>
+	login as <%= current_user.login %>
+<% else %>
+	<%= form_tag({:controller => "users", :action => "login"}, :id => "login-form") do %>
+		login: <%= text_field_tag 'login', '' %>
+		passowrd: <%= password_field_tag 'password', '' %>
+		<%= submit_tag 'login' %>
+	<% end %>
+<% end %>
+	
+
+
+<%= form_tag({:controller => "files", :action => "upload_files"}, :id => "upload-form") do %>
+<div>
+  <div class="uploadBtn" id="multiFilesBtn"></div>
+	</div>
+<div id="multiFilesContainer"></div>
+<%= button_to_function "提交",  "swfu.startUpload();" %>
+<% end %>
+<script type="text/javascript">
+	var session_key_name = "<%= ::Rails.configuration.session_options[:key] %>";
+  var authenticity_token = "<%= form_authenticity_token %>";
+	initMultiFileObj()
+</script>

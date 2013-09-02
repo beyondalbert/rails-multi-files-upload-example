@@ -1,0 +1,26 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+/* 多附件上传的css样式 */
+.uploadBtn{text-decoration:none;height: 26px;color:#000; line-height:26px;text-align:center;background-color:#f4f4f4;width: 120px;position:relative;border:1px solid #ccc;display:inline-block;zoom:1}
+.uploadBtn:hover{text-decoration:none;background-color: #e6f1fc;border-color:#7eb4ea;color:;}
+
+.progressWrapper:after{clear:both;content:'.';display:block;height:0;visibility:hidden;}
+.progressWrapper{zoom:1;}
+.progressDesc{float:left;margin-right:5px;text-overflow:ellipsis;overflow:hidden; white-space:nowrap;}
+.progressCancel{float:left;margin-right:5px;text-overflow:ellipsis;overflow:hidden; white-space:nowrap;}
+.progressName{float:left;margin-right:5px;width:200px;text-overflow:ellipsis;overflow:hidden; white-space:nowrap;}
+.swfupload{border: 1px solid #ccc;width: 100px;height: 26px;margin: 5px 0;}
+.red{border:1px solid red}
+
