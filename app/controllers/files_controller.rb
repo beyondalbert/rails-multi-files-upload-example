@@ -5,11 +5,7 @@ class FilesController < ApplicationController
 	# 用于接受单个附件上传的url接口
   def upload_file
 		a = Attachment.create(name: params['Filename'], path: "files/" + params['Filename'])
-		respond_to do |format|
-			format.js do
-				render :json => {"file_id" => a.id}
-			end
-		end
+		render :text => a.id
   end
 
 	# 处理多附件上传的表单

@@ -1,13 +1,13 @@
 // 多附件上传的初始化
 var swfu;
 function initMultiFileObj(){
+		var post_params_hash = {};
+		post_params_hash[session_key_name] = cookies;
+		post_params_hash["authenticity_token"] = authenticity_token;
     var settings = {
       flash_url : "/swfupload.swf?v=1",
       upload_url: "/files/upload_file",
-      post_params: {
-      	  session_key_name : session_key_name,
-      	  "authenticity_token": authenticity_token
-        },
+      post_params: post_params_hash, 
       file_size_limit : "50 MB",
       file_types : "*.*",
       file_types_description : "All Files",

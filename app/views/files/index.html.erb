@@ -20,5 +20,6 @@
 <script type="text/javascript">
 	var session_key_name = "<%= ::Rails.configuration.session_options[:key] %>";
   var authenticity_token = "<%= form_authenticity_token %>";
+	var cookies = "<%= cookies[::Rails.configuration.session_options[:key]] %>";
 	initMultiFileObj()
 </script>

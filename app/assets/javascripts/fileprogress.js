@@ -70,7 +70,7 @@ FileProgress.prototype.setDesc = function(_data){
 	var _desc = this.fileProgressElement.getElementsByTagName('input')[0];
 	try{
 		_data = eval('(' + _data + ')')
-		_desc.name='des['+_data['file_id']+']';
+		_desc.name='des['+_data+']';
 	} catch(exception){
 
 	}
